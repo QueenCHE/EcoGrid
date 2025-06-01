@@ -1,0 +1,112 @@
+.map-container {
+    max-width: 900px;
+    margin: 4rem auto 2rem auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,83,100,0.08);
+    padding: 2rem;
+}
+.map-title {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #2C5364;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+.sidebyside-maps {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.map-panel {
+    flex: 1;
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(44,83,100,0.10);
+}
+.map-panel-label {
+    background: #2C5364;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.map-img-wrapper {
+    position: relative;
+}
+.side-map-img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.pin {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #4fd1c5;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.15);
+    transition: transform 0.1s;
+}
+.pin:hover {
+    transform: scale(1.15);
+    z-index: 20;
+}
+.pin-popup {
+    display: none;
+    position: absolute;
+    left: 36px;
+    top: 0;
+    background: #fff;
+    color: #203A43;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(44,83,100,0.13);
+    padding: 0.7rem 1.2rem;
+    min-width: 180px;
+    font-size: 1rem;
+    font-family: 'Inter', Arial, sans-serif;
+    z-index: 30;
+}
+.pin.active .pin-popup {
+    display: block;
+}
+.map-legend {
+    margin: 2rem auto 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #203A43;
+    background: #e3e9ef;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+}
+.legend-pin {
+    width: 18px;
+    height: 18px;
+    background: #4fd1c5;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: inline-block;
+}
+@media (max-width: 900px) {
+    .map-container { padding: 1rem; }
+    .slider-map { max-width: 100%; }
+}
+@media (max-width: 600px) {
+    .map-title { font-size: 1.2rem; }
+}

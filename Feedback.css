@@ -1,0 +1,173 @@
+.feedback-main {
+    display: flex;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 5rem auto 2rem auto;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Inter', Arial, sans-serif;
+}
+.feedback-form-wall {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.feedback-form-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,83,100,0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+}
+.feedback-title {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #2C5364;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.feedback-form label {
+    font-weight: 600;
+    color: #203A43;
+    margin-bottom: 0.2rem;
+}
+.feedback-form textarea,
+.feedback-form input[type="text"] {
+    border: 1.5px solid #e3e9ef;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #f6f9fb;
+    resize: none;
+    margin-bottom: 0.5rem;
+}
+.feedback-btn {
+    background: linear-gradient(90deg, #4fd1c5 0%, #63b3ed 100%);
+    color: #fff;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 16px rgba(44, 83, 100, 0.10);
+    padding: 0.85rem 2.2rem;
+    letter-spacing: 1px;
+    cursor: not-allowed;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+.comment-wall {
+    background: #e3e9ef;
+    border-radius: 14px;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 2px 12px rgba(44,83,100,0.07);
+}
+.comment-wall-title {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #2C5364;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.comment-quote {
+    font-size: 1.05rem;
+    color: #203A43;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.08);
+    font-style: italic;
+    position: relative;
+}
+.comment-author {
+    display: block;
+    font-size: 0.98em;
+    color: #4fd1c5;
+    font-style: normal;
+    margin-top: 0.3em;
+}
+.ecobot-sidebar {
+    flex: 1 1 280px;
+    min-width: 220px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem 1.2rem;
+    box-shadow: 0 2px 12px rgba(44,83,100,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    max-width: 340px;
+}
+.ecobot-header {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #2C5364;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+.ecobot-chat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.ecobot-bubble, .user-bubble {
+    padding: 0.7rem 1.1rem;
+    border-radius: 18px;
+    font-size: 1rem;
+    max-width: 95%;
+    margin-bottom: 0.2rem;
+}
+.ecobot-bubble {
+    background: #e3e9ef;
+    color: #203A43;
+    align-self: flex-start;
+}
+.user-bubble {
+    background: #4fd1c5;
+    color: #fff;
+    align-self: flex-end;
+}
+.ecobot-input {
+    margin-top: 0.7rem;
+    border: 1.5px solid #e3e9ef;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #f6f9fb;
+    width: 100%;
+    outline: none;
+}
+@media (max-width: 900px) {
+    .feedback-main {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: stretch;
+    }
+    .ecobot-sidebar {
+        max-width: 100%;
+        margin-top: 2.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .feedback-form-container, .comment-wall, .ecobot-sidebar {
+        padding: 1rem 0.5rem;
+    }
+    .feedback-title {
+        font-size: 1.1rem;
+    }
+}

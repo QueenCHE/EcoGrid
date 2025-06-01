@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Bayog: A Community Reclaimed | Photo Album</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Album.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Assets/logo.png" alt="EcoGrid Logo" class="logo-img">
+                <span class="logo-text">EcoGrid</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Map.html">Map</a></li>
+                <li><a href="Album.html" class="active">Album</a></li>
+                <li><a href="Stories.html">Stories</a></li>
+                <li><a href="Plans.html">Plans</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Letter.html">Letter</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="album-container">
+        <h1 class="album-title">🖼️ Barangay Bayog: A Community Reclaimed</h1>
+        <div class="carousel" id="carousel">
+            <button class="carousel-btn prev" id="prevBtn">&#8592;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1: Old 2025 -->
+                <div class="carousel-slide">
+                    <img src="Assets/trash.png" alt="Trash-strewn banks" class="carousel-img">
+                    <div class="carousel-caption">
+                        <b>2025: Trash-strewn banks</b>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Assets/brokenpath.png" alt="Crumbling concrete walkways" class="carousel-img">
+                    <div class="carousel-caption">
+                        <b>2025: Crumbling concrete walkways</b>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Assets/brokenhouse.png" alt="Makeshift stilt houses" class="carousel-img">
+                    <div class="carousel-caption">
+                        <b>2025: Makeshift stilt houses</b>
+                    </div>
+                </div>
+                <!-- Slide 4: New 2050 -->
+                <div class="carousel-slide">
+                    <img src="Assets/newpath.png" alt="Floating gardens and wooden boardwalks" class="carousel-img">
+                    <div class="carousel-caption">
+                        <b>2050: Floating gardens and wooden boardwalks</b>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Assets/newhome.png " alt="Solar-lit floating homes" class="carousel-img">
+                    <div class="carousel-caption">
+                        <b>2050: Solar-lit floating homes</b>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Assets/murals.png" alt="Murals painted by local youth" class="carousel-img">
+                    <div class="carousel-caption">
+                        <b>2050: Murals painted by local youth</b>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">&#8594;</button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+    </div>
+    <script>
+        // Simple carousel logic
+        const track = document.getElementById('carouselTrack');
+        const slides = Array.from(track.children);
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.getElementById('carouselIndicators');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            Array.from(indicators.children).forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentIndex);
+            });
+        }
+
+        // Create indicators
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('span');
+            dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+            dot.addEventListener('click', () => {
+                currentIndex = idx;
+                updateCarousel();
+            });
+            indicators.appendChild(dot);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        });
+
+        updateCarousel();
+    </script>
+</body>
+</html>

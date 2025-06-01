@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGrid Laguna | Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Feedback.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Assets/logo.png" alt="EcoGrid Logo" class="logo-img">
+                <span class="logo-text">EcoGrid</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Map.html">Map</a></li>
+                <li><a href="Album.html">Album</a></li>
+                <li><a href="Stories.html">Stories</a></li>
+                <li><a href="Plans.html">Plans</a></li>
+                <li><a href="Feedback.html" class="active">Feedback</a></li>
+                <li><a href="Letter.html">Letter</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="feedback-main">
+        <div class="feedback-form-wall">
+            <div class="feedback-form-container">
+                <h1 class="feedback-title">💬 We Value Your Feedback</h1>
+                <form class="feedback-form">
+                    <label for="story">📝 Share Your Story</label>
+                    <textarea id="story" name="story" rows="3" placeholder="Tell us about your experience..."></textarea>
+                    
+                    <label for="facility">📍 Suggest a New Floating Facility</label>
+                    <input type="text" id="facility" name="facility" placeholder="e.g. Floating library, market, etc.">
+                    
+                    <label for="pollution">🐟 Report Water Pollution</label>
+                    <textarea id="pollution" name="pollution" rows="2" placeholder="Describe the issue or location..."></textarea>
+                    
+                    <button type="submit" class="feedback-btn" disabled>Submit</button>
+                </form>
+            </div>
+            <div class="comment-wall">
+                <h2 class="comment-wall-title">🧑‍🤝‍🧑 Citizen Voices</h2>
+                <div class="comment-list">
+                    <div class="comment-quote">"The floating gardens brought new life to our barangay!" <span class="comment-author">– Liza, Bayog</span></div>
+                    <div class="comment-quote">"I hope for more floating playgrounds for our kids." <span class="comment-author">– Marco, San Pedro</span></div>
+                    <div class="comment-quote">"EcoGrid listens to our needs. Salamat!" <span class="comment-author">– Ana, Calamba</span></div>
+                </div>
+            </div>
+        </div>
+        <aside class="ecobot-sidebar">
+            <div class="ecobot-header">🤖 Ask EcoBot!</div>
+            <div class="ecobot-chat">
+                <div class="ecobot-bubble">Hi! I’m EcoBot. Ask me anything about EcoGrid Laguna, floating markets, or water quality.</div>
+                <div class="user-bubble">How do floating homes get electricity?</div>
+                <input class="ecobot-input" type="text" placeholder="Chat with EcoBot...">
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

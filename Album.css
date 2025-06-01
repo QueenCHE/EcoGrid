@@ -1,0 +1,115 @@
+.album-container {
+    max-width: 700px;
+    margin: 5rem auto 2rem auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,83,100,0.08);
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+}
+.album-title {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 2rem;
+    color: #2C5364;
+    margin-bottom: 2rem;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    width: 100%;
+}
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel-img {
+    width: 100%;
+    max-width: 420px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,83,100,0.10);
+    margin-bottom: 1rem;
+    background: #eee;
+}
+.carousel-caption {
+    font-size: 1.1rem;
+    color: #203A43;
+    background: #e3e9ef;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', Arial, sans-serif;
+}
+.carousel-btn {
+    background: #4fd1c5;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: background 0.2s;
+}
+.carousel-btn:hover {
+    background: #2C5364;
+}
+.carousel-btn.prev {
+    left: -18px;
+}
+.carousel-btn.next {
+    right: -18px;
+}
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e3e9ef;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+}
+.carousel-dot.active {
+    background: #4fd1c5;
+}
+@media (max-width: 600px) {
+    .album-container {
+        padding: 1rem 0.2rem 1.5rem 0.2rem;
+    }
+    .carousel-img {
+        height: 140px;
+        max-width: 98vw;
+    }
+    .carousel {
+        max-width: 98vw;
+    }
+}

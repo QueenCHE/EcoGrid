@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗺️ Interactive Transformation Map | EcoGrid Laguna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Map.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Assets/logo.png" alt="EcoGrid Logo" class="logo-img">
+                <span class="logo-text">EcoGrid</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Map.html" class="active">Map</a></li>
+                <li><a href="Album.html">Album</a></li>
+                <li><a href="Stories.html">Stories</a></li>
+                <li><a href="Plans.html">Plans</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Letter.html">Letter</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="map-container">
+        <div class="map-title">🗺️ Interactive Transformation Map<br>
+            <span style="font-size:1.1rem;font-weight:400;">“From Floodplain to Floating Futures”</span>
+        </div>
+        <div class="sidebyside-maps">
+            <div class="map-panel">
+                <div class="map-panel-label">2025 View</div>
+                <div class="map-img-wrapper">
+                    <img src="Assets/Map2.png" alt="2025 View" class="side-map-img" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="pin" style="top: 60%; left: 18%;" data-title="Bayog Aquafarm Hub">
+                        <span>🐟</span>
+                        <div class="pin-popup" style="left: 36px; top: auto; bottom: 40px;">
+                            Bayog Aquafarm Hub<br>
+                            <span style="font-size:0.95em;color:#4fd1c5;">Aquaculture innovation & community jobs</span>
+                        </div>
+                    </div>
+                    <div class="pin" style="top: 75%; left: 40%;" data-title="San Pedro Floating Market">
+                        <span>🛶</span>
+                        <div class="pin-popup" style="left: 36px; top: auto; bottom: 40px;">
+                            San Pedro Floating Market<br>
+                            <span style="font-size:0.95em;color:#4fd1c5;">Commerce on water, local produce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-panel">
+                <div class="map-panel-label">2050 View</div>
+                <div class="map-img-wrapper">
+                    <img src="Assets/Map1.png" alt="2050 View" class="side-map-img" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="pin" style="top: 65%; left: 10%;" data-title="Calamba Wetland Park">
+                        <span>🌱</span>
+                        <div class="pin-popup" style="left: 36px; top: auto; bottom: 40px;">
+                            Calamba Wetland Park<br>
+                            <span style="font-size:0.95em;color:#4fd1c5;">Hybrid parks, eco-tourism, flood buffer</span>
+                        </div>
+                    </div>
+                    <div class="pin" style="top: 85%; left: 30%;" data-title="Youth Design Studio">
+                        <span>🎓</span>
+                        <div class="pin-popup" style="left: 36px; top: auto; bottom: 40px;">
+                            Youth Design Studio<br>
+                            <span style="font-size:0.95em;color:#4fd1c5;">Legacy co-design program</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-legend">
+            <div class="legend-item"><span class="legend-pin"></span> Transformation Pin</div>
+            <div class="legend-item"><b>2025</b>: Informal settlements, urban flooding, degraded fisheries</div>
+            <div class="legend-item"><b>2050</b>: Floating markets, hybrid parks, aquaponics zones, buffer mangroves</div>
+        </div>
+    </div>
+    <script>
+        // Pin marker popup logic
+        document.querySelectorAll('.pin').forEach(pin => {
+            pin.addEventListener('click', function(e) {
+                document.querySelectorAll('.pin').forEach(p => p.classList.remove('active'));
+                pin.classList.add('active');
+                e.stopPropagation();
+            });
+        });
+        document.body.addEventListener('click', function() {
+            document.querySelectorAll('.pin').forEach(p => p.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
